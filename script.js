@@ -1,15 +1,5 @@
-
-
 const btnBuka = document.getElementById("btnBukaUndangan");
 const targetSection = document.getElementById("waktu-tempat");
-
-if (btnBuka && targetSection) {
-  btnBuka.addEventListener("click", () => {
-    document.body.classList.remove("locked");
-    targetSection.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
 const bgMusic = document.getElementById("bgMusic");
 const btnMusik = document.getElementById("btnMusik");
 let isPlaying = false;
@@ -28,7 +18,6 @@ async function playMusik() {
     await bgMusic.play();
     updateMusikUI(true);
   } catch (err) {
-   
     updateMusikUI(false);
   }
 }
@@ -39,7 +28,6 @@ function pauseMusik() {
   updateMusikUI(false);
 }
 
-
 if (btnBuka && targetSection) {
   btnBuka.addEventListener("click", () => {
     document.body.classList.remove("locked");
@@ -48,8 +36,7 @@ if (btnBuka && targetSection) {
   });
 }
 
-k
-if (btnMusik) 
+if (btnMusik) {
   btnMusik.addEventListener("click", () => {
     if (isPlaying) {
       pauseMusik();
@@ -57,8 +44,9 @@ if (btnMusik)
       playMusik();
     }
   });
+}
 
-
+// Countdown
 const targetDate = new Date("November 29, 2026 10:00:00").getTime();
 
 const timerInterval = setInterval(function () {
@@ -90,7 +78,7 @@ const timerInterval = setInterval(function () {
   if (secondsEl) secondsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
 }, 1000);
 
-
+// Scroll reveal galeri
 const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length > 0) {
@@ -99,18 +87,19 @@ if (revealElements.length > 0) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target); 
+          obs.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.15, 
+      threshold: 0.15,
     }
   );
 
   revealElements.forEach((el) => observer.observe(el));
 }
 
+// Salin nomor rekening
 async function salinRekening(elementId, tombol) {
   const el = document.getElementById(elementId);
   if (!el) return;
@@ -138,7 +127,7 @@ async function salinRekening(elementId, tombol) {
   }, 2000);
 }
 
-
+// Form RSVP ke WhatsApp
 const rsvpForm = document.getElementById("rsvpForm");
 
 if (rsvpForm) {
