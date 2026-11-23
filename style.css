@@ -43,6 +43,22 @@ body {
   border-color: #3a2e25;
 }
 
+.kata-pengantar {
+  max-width: 820px;
+  margin: 24px auto;
+  padding: 20px 24px;
+  background: #f6f1eb;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.kata-pengantar p {
+  margin: 0;
+  font-size: clamp(15px, 2.4vw, 18px);
+  line-height: 1.65;
+  color: #3a2e25;
+}
+
 .container {
   padding: 16px;
   font-size: 15px;
