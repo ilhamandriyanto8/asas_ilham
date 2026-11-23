@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <audio id="bgMusic" src="mixkit-wedding-01-657.mp3" loop preload="auto"></audio>
+
+    <button id="btnMusik" class="btn-musik" type="button" aria-label="Putar atau jeda musik">
+  ♪ Musik: Off
+</button>
+<section class="cover">
+    <h1>Kepada Yth Tamu Undangan Pernikahan</h1>
+    <h2>Andi &amp; Vina</h2>
+
+    <img src="Gemini_Generated_Image_d3bks8d3bks8d3bk.jpg" alt="Pengantin-pria">
+    <img src="Gemini_Generated_Image_q39iqmq39iqmq39i.jpg" alt="Pengantin-Wanita">
+    <button id="btnBukaUndangan" class="btn-buka" type="button">
+      Buka Undangan
+    </button>
+</section>
+
+<main id="isi-undangan">
+
+  
+  <div id="waktu-tempat">
+    <h2>Waktu &amp; Tempat</h2>
+    <div class="waktu-tempat">
+      Minggu 29 November 2026<br>
+      10:00 WIB<br>
+      She La Vie Grand Ballroom
+    </div>
+  </div>
+
+  <div class="countdown-container">
+    <h2>Menuju Acara Pernikahan</h2>
+    <div class="timer" id="countdown">
+      <div class="time-box">
+        <span id="days">00</span>
+        <p>Hari</p>
+      </div>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <p>Jam</p>
+      </div>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <p>Menit</p>
+      </div>
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <p>Detik</p>
+      </div>
+    </div>
+  </div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1722509190754!2d106.64940107499095!3d-6.2410156937473085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbdec2522381%3A0x807cc91e68453acf!2sShe%20La%20Vie%20Grand%20Ballroom!5e0!3m2!1sid!2sid!4v1795400873192!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+  <h2>Detail Acara</h2>
+  <ul class="list-acara">
+    <li>Pembukaan</li>
+    <li>Kirab Pengantin</li>
+    <li>Sambutan &amp; Doa</li>
+    <li>Prosesi Potong Kue</li>
+    <li>Sesi Ramah Tamah &amp; Makan</li>
+    <li>Sesi Foto Bersama</li>
+    <li>Lempar Buket Bunga</li>
+    <li>Penutup</li>
+  </ul>
+
+<section id="galeri" class="galeri-section">
+  <h2>Galeri Momen</h2>
+  <p class="galeri-subtitle">Potret perjalanan cinta kami menuju hari bahagia</p>
+
+  <div class="galeri-grid">
+    <figure class="galeri-item reveal">
+      <img src="Gemini_Generated_Image_pwi1jbpwi1jbpwi1.jpg" alt="Momen prewedding 1" loading="lazy">
+      <figcaption>Awal Kisah Kami</figcaption>
+    </figure>
+
+    <figure class="galeri-item reveal">
+      <img src="Gemini_Generated_Image_oovqk7oovqk7oovq.jpg" alt="Momen prewedding 2" loading="lazy">
+      <figcaption>Langkah Bersama</figcaption>
+    </figure>
+
+    <figure class="galeri-item reveal">
+      <img src="Gemini_Generated_Image_gudlzagudlzagudl.jpg" alt="Momen prewedding 3" loading="lazy">
+      <figcaption>Janji &amp; Harapan</figcaption>
+    </figure>
+
+    <figure class="galeri-item reveal">
+      <img src="Gemini_Generated_Image_linpjqlinpjqlinp.jpg" alt="Momen prewedding 4" loading="lazy">
+      <figcaption>Menuju Hari Bahagia</figcaption>
+    </figure>
+  </div>
+</section>
+
+  <h2>Berikan Hadiah Kepada Pengantin</h2>
+
+  <div class="amplop-wrapper">
+    <div class="rekening-card">
+      <div class="nama-bank">BANK BCA</div>
+
+      <div class="nomor-rek-box">
+        <span id="rekBca" class="nomor-rek">1234 5678 90</span>
+      </div>
+
+      <div class="atas-nama">Andi aja</div>
+
+      <button class="btn-copy" type="button" onclick="salinRekening('rekBca', this)">
+        Salin Nomor
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<div class="rsvp">
+  <h2>Konfirmasi Kehadiran</h2>
+  <form id="rsvpForm">
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+
+    <label for="status">Konfirmasi Kehadiran:</label>
+    <select id="status" required>
+      <option value="Hadir">Ya, Saya Akan Hadir</option>
+      <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+    </select>
+
+    <label for="jumlah">Jumlah Tamu:</label>
+    <input type="number" id="jumlah" min="1" max="10" value="1" required>
+
+    <label for="pesan">Ucapan / Doa:</label>
+    <textarea id="pesan" rows="3" placeholder="Tulis ucapan untuk mempelai/tuan rumah..."></textarea>
+
+    <button type="submit">Kirim via WhatsApp</button>
+  </form>
+</div>
+
+</body>
+</html>
